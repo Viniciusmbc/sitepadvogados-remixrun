@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function CardsStep({
@@ -20,6 +21,14 @@ export default function CardsStep({
   text4: string;
 }) {
   const [ref, inView] = useInView();
+  const [animation1Complete, setAnimation1Complete] = useState(false);
+  const [animation2Complete, setAnimation2Complete] = useState(false);
+
+  const handleAnimation1Complete = () => {
+    setAnimation1Complete(true);
+  };
+
+  const animation2Class = animation1Complete && inView ? "scale-up-tr" : "";
 
   return (
     <div className=" flex justify-center items-center">
@@ -27,6 +36,7 @@ export default function CardsStep({
         className={`${
           inView ? "scale-up-tr" : null
         }   w-72 h-60 px-5 py-2 text-center border border-quaternary shadow-xl relative`}
+        onAnimationEnd={handleAnimation1Complete}
         ref={ref}
       >
         <div className="  h-10 bg-quaternary border-b-primary  shadow-md absolute inset-x-0 top-0">
@@ -58,9 +68,7 @@ export default function CardsStep({
         />
       </svg>
       <div
-        className={`${
-          inView ? "scale-up-tr" : null
-        } w-72 h-60 px-8 py-6 text-center border border-quaternary shadow-xl relative`}
+        className={`${animation2Class} w-72 h-60 px-8 py-6 text-center border border-quaternary shadow-xl relative`}
       >
         <div className=" h-10 bg-quaternary border-b-primary  shadow-md absolute inset-x-0 top-0">
           <div className=" flex gap-x-4 justify-end  h-10 items-center mr-2 ">
@@ -86,10 +94,11 @@ export default function CardsStep({
         <path
           d="M374.071 13.0607C374.657 12.4749 374.657 11.5251 374.071 10.9393L364.525 1.3934C363.94 0.807612 362.99 0.807612 362.404 1.3934C361.818 1.97918 361.818 2.92893 362.404 3.51472L370.889 12L362.404 20.4853C361.818 21.0711 361.818 22.0208 362.404 22.6066C362.99 23.1924 363.94 23.1924 364.525 22.6066L374.071 13.0607ZM0.989258 13.5H373.011V10.5H0.989258V13.5Z"
           fill="black"
-          className="slideInLeft"
         />
       </svg>
-      <div className="scale-up-tr-1 w-72 h-60 px-8 py-6 text-center border border-quaternary shadow-xl relative ">
+      <div
+        className={`scale-up-tr-1 w-72 h-60 px-8 py-6 text-center border border-quaternary shadow-xl relative `}
+      >
         <div className=" h-10 bg-quaternary border-b-primary  shadow-md absolute inset-x-0 top-0">
           <div className=" flex gap-x-4 justify-end  h-10 items-center mr-2 ">
             <span className="  bg-white w-4 h-1"></span>
