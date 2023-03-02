@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function CardsStep({

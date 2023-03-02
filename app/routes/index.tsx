@@ -13,9 +13,6 @@ import {
 // Remix Components
 import { Link } from "@remix-run/react";
 
-// Layout
-import Navbar from "../components/Layout/Navbar";
-
 // Images
 import socialmediaimg from "../../public/whatsimagem2.png";
 import securityWebImage from "../../public/websecurity-ai.jpg";
@@ -44,7 +41,7 @@ export default function Home() {
           className=" absolute left-2/4"
         />
         <div className=" top-[15%]  absolute z-10 inset-y-0 left-28 ">
-          <h1 className=" text-quaternary font-bold text-7xl flex flex-col">
+          <h1 className=" text-quaternary font-bold  flex flex-col text-3xl md:text-7xl">
             Nós colocamos seus <br></br>
             <span className=" text-secondary">
               Serviços de Advocacia <br></br>
@@ -166,18 +163,32 @@ export default function Home() {
                 height="200"
                 className=" max-h-[200px]"
               />
-              <h3 className=" mx-auto">Link para as Redes Sociais</h3>
+              <strong className="text-center block text-lg">
+                Link para as Redes Sociais
+              </strong>
             </li>
             <hr className="w-1 h-48 mx-auto my-4 bg-quaternary border-0 rounded md:my-10 "></hr>
 
             <li className="w-full max-w-[300px]">
               <img src={whatsappIcon} alt="whatsapp" width="300" height="300" />
-              <h3> Botão para comunicação direta com o WhatsApp.</h3>
+              <strong className="text-center block text-lg">
+                {" "}
+                Botão para comunicação direta com o WhatsApp.
+              </strong>
             </li>
             <hr className="w-1 h-48 mx-auto my-4 bg-quaternary border-0 rounded md:my-10 "></hr>
             <li className=" w-full max-w-[300px]">
-              <img src={formImg} alt="formImg" width="300" height="300" />
-              Formulário de Contato
+              <img
+                src={formImg}
+                alt="formImg"
+                width="300"
+                height="300"
+                className="max-w-[300px]"
+              />
+              <strong className="text-center text-lg block">
+                {" "}
+                Formulário de Contato
+              </strong>
             </li>
             <hr className="w-1 h-48 mx-auto my-4 bg-quaternary border-0 rounded md:my-10 "></hr>
             <li className=" w-full max-w-[300px]">
@@ -186,8 +197,12 @@ export default function Home() {
                 alt="securityWebImage"
                 width="300"
                 height="300"
+                className="max-w-[300px]"
               />
-              Segurança: certificado SSL gratuito.
+              <strong className="text-center block text-lg">
+                {" "}
+                Segurança: certificado SSL gratuito.
+              </strong>
             </li>
           </ul>
         </section>
@@ -269,7 +284,7 @@ export default function Home() {
           Entre em contato conosco!
         </h3>
       </section>
-      <div className=" background-linear-before-footer">
+      <div className=" background-linear-before-footer pb-32">
         {" "}
         <section className=" pt-32">
           <strong className=" text-5xl text-center text-secondary my-32">

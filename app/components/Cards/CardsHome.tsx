@@ -24,7 +24,7 @@ export default function CardsHome({
   return (
     <div
       className={`flex flex-col p-9 h-[412px] w-96 border border-white shadow-md bg-[#f8fafd] rounded-3xl ${
-        inView && !hasAnimated ? "zoomIn" : ""
+        inView && !hasAnimated ? "zoomIn" : null
       }`}
       onAnimationEnd={handleAnimationEnd}
       ref={ref}

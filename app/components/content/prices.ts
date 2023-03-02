@@ -35,7 +35,7 @@ export const priceBasic: {
       payInParts: 65,
       options: [
         "Site Completo;",
-        "Hospedagem grátis por 6 mês;",
+        "Hospedagem grátis por 6 meses;",
         "Site com Layout Exclusivo;",
         "Máximo de 5 Páginas;",
         "Automatização do WhatsApp;",
@@ -60,7 +60,7 @@ export const priceBasic: {
       payInParts: 95,
       options: [
         "Site Completo;",
-        "Hospedagem grátis por 12 mês;",
+        "Hospedagem grátis por 12 meses;",
         "Site com Layout Exclusivo;",
         "Máximo de 10 Páginas;",
         "Automatização do WhatsApp;",
