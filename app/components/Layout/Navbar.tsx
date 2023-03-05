@@ -20,13 +20,18 @@ export default function Navbar() {
             rounded-br-full absolute -z-20 hidden md:block  "
       ></div>
       <nav className=" hidden justify-around items-center  text-[#000000] h-16 text-lg md:flex">
-        <img
-          src={advogwebimage}
-          alt={"Logo do AdvogWeb"}
-          width="300"
-          height="300"
-          className=" w-fit max-h-full"
-        />
+        <figure className=" w-[80px] max-h-full">
+          {" "}
+          <img
+            src={advogwebimage}
+            alt={"Logo do AdvogWeb"}
+            width="300"
+            height="300"
+            className=" w-fit max-h-full"
+          />
+          <p>AdvogWeb</p>
+        </figure>
+
         <ul className="  space-x-10 items-center md:flex">
           {menuItems.map((items, index) => (
             <li className=" hover:text-tercery" key={index}>
@@ -68,7 +73,7 @@ export default function Navbar() {
             }`}
           />
         </button>
-        <figure className=" mr-3 pt-3 ml-auto max-w-[50px]">
+        <figure className=" mr-3 pt-3 ml-auto max-w-[50px] md:hidden">
           <img
             src={advogwebimage}
             alt={"Logo do AdvogWeb"}

@@ -37,7 +37,7 @@ export default function Home() {
           alt="imagem de background"
           width={812}
           height={903}
-          className=" absolute left-2/4 hidden md:block md:max-w-[512px] -z-40"
+          className=" absolute left-[68%] top-[12%]  hidden md:block md:max-w-[512px] -z-40"
         />
         <div className=" top-[15%]  absolute z-40 inset-y-0 md:left-28 ">
           <h1 className=" text-quaternary font-bold  flex flex-col text-3xl text-center md:text-left  md:text-7xl">
