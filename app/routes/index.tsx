@@ -31,24 +31,23 @@ import semicirculo2 from "../../public/meia-lua-home.png";
 export default function Home() {
   return (
     <main>
-      {" "}
-      <section className=" flex  justify-center items-center h-[85vh] relative">
+      <section className="  flex   justify-center items-center h-[85vh] relative ">
         <img
           src={backgroundImageHome}
           alt="imagem de background"
           width={812}
           height={903}
-          className=" absolute left-2/4"
+          className=" absolute left-2/4 hidden md:block md:max-w-[512px] -z-40"
         />
-        <div className=" top-[15%]  absolute z-10 inset-y-0 left-28 ">
-          <h1 className=" text-quaternary font-bold  flex flex-col text-3xl md:text-7xl">
+        <div className=" top-[15%]  absolute z-40 inset-y-0 md:left-28 ">
+          <h1 className=" text-quaternary font-bold  flex flex-col text-3xl text-center md:text-left  md:text-7xl">
             Nós colocamos seus <br></br>
             <span className=" text-secondary">
               Serviços de Advocacia <br></br>
             </span>
             na Web!
           </h1>
-          <h2 className=" my-8 text-xl  text-primary max-w-[438px]">
+          <h2 className=" my-8 text-xl  text-primary max-w-[438px] text-center">
             Ter um site que atraia e converta clientes é essencial para
             construir uma carreira sólida na advocacia.{" "}
             <i>De advogado para advogado.</i>
@@ -56,7 +55,7 @@ export default function Home() {
 
           <Link
             to={"/"}
-            className=" mt-9 mx-auto text-xl w-80 p-4  bg-secondary rounded-full text-white text-center hover:bg-quaternary hover:text-secondary "
+            className="block mt-9 mx-auto text-xl w-56  p-4  bg-secondary rounded-full text-white text-center hover:bg-quaternary hover:text-secondary md:w-80"
           >
             Contate-nos
           </Link>
@@ -64,7 +63,7 @@ export default function Home() {
 
         <img
           src={imagemPrincipal}
-          className=" max-w-[524px] max-h-[524px] absolute inset-y-0 right-0 top-[20%]"
+          className=" md:max-w-[524px] md:max-h-[524px] absolute inset-y-0 right-0 top-[20%] "
           width={524}
           height={524}
           alt="imagem principal"
@@ -74,12 +73,13 @@ export default function Home() {
           alt="um semi circulo"
           width="316"
           height="241"
-          className=" absolute left-64 top-[93%] -z-30"
+          className=" absolute left-64 top-[93%] -z-30 hidden md:block"
         />
       </section>
+
       <div>
         <section className="flex mx-auto flex-col justify-center items-center pt-24 w-full max-w-[100vw]">
-          <h2 className=" text-5xl mb-32">
+          <h2 className="  mb-24 text-center text-2xl  md:mb-32 md:text-5xl">
             Por que nos <b className=" text-tercery">escolher</b> para criar seu
             site?
           </h2>
@@ -151,11 +151,11 @@ export default function Home() {
       </div>
       <div>
         <section>
-          <h3 className=" text-5xl text-center pt-10 text-secondary my-32 ">
+          <h3 className="text-2xl md:text-5xl text-center pt-10 text-secondary my-20 md:my-32 ">
             Todos nossos sites incluem:
           </h3>
           <ul className=" flex flex-wrap justify-around items-center">
-            <li className=" w-full max-w-[300px]">
+            <li className=" mb-24 w-full max-w-[300px] md:mb-0">
               <img
                 src={socialmediaimg}
                 alt="socialmedia"
@@ -163,21 +163,21 @@ export default function Home() {
                 height="200"
                 className=" max-h-[200px]"
               />
-              <strong className="text-center block text-lg">
+              <strong className="text-center block text-lg mt-4">
                 Link para as Redes Sociais
               </strong>
             </li>
-            <hr className="w-1 h-48 mx-auto my-4 bg-quaternary border-0 rounded md:my-10 "></hr>
+            <hr className="hidden w-1 h-48 mx-auto my-4 bg-quaternary border-0 rounded md:my-10 md:block "></hr>
 
-            <li className="w-full max-w-[300px]">
+            <li className="w-full max-w-[300px] mb-24 md:mb-0">
               <img src={whatsappIcon} alt="whatsapp" width="300" height="300" />
-              <strong className="text-center block text-lg">
+              <strong className="text-center block text-lg mt-4">
                 {" "}
                 Botão para comunicação direta com o WhatsApp.
               </strong>
             </li>
-            <hr className="w-1 h-48 mx-auto my-4 bg-quaternary border-0 rounded md:my-10 "></hr>
-            <li className=" w-full max-w-[300px]">
+            <hr className="hidden w-1 h-48 mx-auto my-4 bg-quaternary border-0 rounded md:my-10 md:block "></hr>
+            <li className=" w-full max-w-[300px] mb-24  md:mb-0">
               <img
                 src={formImg}
                 alt="formImg"
@@ -185,13 +185,13 @@ export default function Home() {
                 height="300"
                 className="max-w-[300px]"
               />
-              <strong className="text-center text-lg block">
+              <strong className="text-center text-lg block mt-4">
                 {" "}
                 Formulário de Contato
               </strong>
             </li>
-            <hr className="w-1 h-48 mx-auto my-4 bg-quaternary border-0 rounded md:my-10 "></hr>
-            <li className=" w-full max-w-[300px]">
+            <hr className="hidden w-1 h-48 mx-auto my-4 bg-quaternary border-0 rounded md:my-10 md:block "></hr>
+            <li className=" w-full max-w-[300px] mb-24  md:mb-0">
               <img
                 src={securityWebImage}
                 alt="securityWebImage"
@@ -199,7 +199,7 @@ export default function Home() {
                 height="300"
                 className="max-w-[300px]"
               />
-              <strong className="text-center block text-lg">
+              <strong className="text-center block text-lg mt-4">
                 {" "}
                 Segurança: certificado SSL gratuito.
               </strong>
@@ -209,7 +209,7 @@ export default function Home() {
       </div>
       <div>
         <section className=" flex flex-col justify-center ">
-          <em className=" text-5xl text-center pt-10 text-secondary my-32">
+          <em className="text-2xl md:text-5xl text-center text-secondary my-10 md:my-32 ">
             Passo a Passo para criarmos o WebSite{" "}
             <span className=" underline">certo</span> para você:
           </em>
@@ -279,15 +279,15 @@ export default function Home() {
           </div>
         </div>
         <h3 className=" text-4xl text-secondary text-center">
-          Quer postagem <i className=" text-quaternary">mensais</i> no Blog do
-          seu site? <br></br>
+          Quer postagem <i className=" text-quaternary">mensais</i> no Blog{" "}
+          <br className="md:hidden"></br> do seu site? <br></br>
           Entre em contato conosco!
         </h3>
       </section>
       <div className=" background-linear-before-footer pb-32">
         {" "}
-        <section className=" pt-32">
-          <strong className=" text-5xl text-center text-secondary my-32">
+        <section className=" pt-24 md:pt-32">
+          <strong className=" w-full flex text-5xl text-center text-secondary my-20 md:my-32">
             Perguntas Frequentes
           </strong>
           <details className=" text-lg leading-loose my-4">
@@ -350,7 +350,7 @@ export default function Home() {
             site baseado em um template pré-definido.
           </details>
           <details className=" text-lg leading-loose my-4">
-            <summary className=" marker:text-quaternary cursor-pointer text-lg font-bold">
+            <summary className=" marker:text-quaternary cursor-pointer text-xl font-bold">
               O que é uma Landing Page?
             </summary>
             Uma landing page é uma página da web projetada para converter
@@ -370,7 +370,7 @@ export default function Home() {
             troca de suas informações de contato.
           </details>
           <details className=" text-lg leading-loose my-4">
-            <summary className=" marker:text-quaternary cursor-pointer text-lg font-bold">
+            <summary className=" marker:text-quaternary cursor-pointer text-xl font-bold">
               Em quanto tempo o site fica pronto?
             </summary>
             Após a aprovação do Layout, o site ficará pronto em até 5 dias
@@ -378,7 +378,7 @@ export default function Home() {
           </details>
 
           <details className=" text-lg leading-loose my-4">
-            <summary className=" marker:text-quaternary cursor-pointer text-lg font-bold">
+            <summary className=" marker:text-quaternary cursor-pointer text-xl font-bold">
               É possível que vocês redigiam os textos iniciais do site
               (descrição do escritório, áreas de atuação, etc )?
             </summary>
@@ -386,7 +386,7 @@ export default function Home() {
             valores.
           </details>
           <details className=" text-lg leading-loose my-4">
-            <summary className=" marker:text-quaternary cursor-pointer text-lg font-bold text-secondary">
+            <summary className=" marker:text-quaternary cursor-pointer text-xl font-bold">
               Ainda não tenho o domínio registrado (www.seusite.com.br), o que
               devo fazer?
             </summary>
@@ -397,13 +397,13 @@ export default function Home() {
             domains.
           </details>
           <details className=" text-lg leading-loose my-4">
-            <summary className=" marker:text-quaternary cursor-pointer text-lg font-bold">
+            <summary className=" marker:text-quaternary cursor-pointer text-xl font-bold">
               Quais as formas de pagamento?
             </summary>
             Aceitamos PIX e Cartão de Crédito.
           </details>
           <details className=" text-lg leading-loose my-4">
-            <summary className=" marker:text-quaternary cursor-pointer text-lg font-bold">
+            <summary className=" marker:text-quaternary cursor-pointer text-xl font-bold">
               Tenho alguma garantia que vou receber meu site no prazo?
             </summary>
             Além do contrato, você pode optar por comprar diretamente em anúncio
@@ -411,21 +411,21 @@ export default function Home() {
             oferece.
           </details>
           <details className=" text-lg leading-loose my-4">
-            <summary className=" marker:text-quaternary cursor-pointer text-lg font-bold">
+            <summary className=" marker:text-quaternary cursor-pointer text-xl font-bold">
               Há algum valor mensal a ser pago?
             </summary>
             Não, você só pagará pela manutenção do site caso deseje fazer alguma
             modificação como troca de uma imagem ou mudança no layout.
           </details>
           <details className=" text-lg leading-loose my-4">
-            <summary className=" marker:text-quaternary cursor-pointer text-lg font-bold">
+            <summary className=" marker:text-quaternary cursor-pointer text-xl font-bold">
               Vocês fornecem o código fonte do site desenvolvido?
             </summary>
             Sim, fornecemos o código fonte para, caso você deseje, possa migrar
             para outra plataforma ou outros desenvolvedores.
           </details>
           <details className=" text-lg leading-loose my-4">
-            <summary className=" marker:text-quaternary cursor-pointer text-lg font-bold">
+            <summary className=" marker:text-quaternary cursor-pointer text-xl font-bold">
               Há um página ou espaço apropriado para eu postar notícias ou
               minhas próprias postagens?
             </summary>
@@ -434,7 +434,7 @@ export default function Home() {
             úteis no site, sem custo adicional.
           </details>
           <details className=" text-lg leading-loose my-4">
-            <summary className=" marker:text-quaternary cursor-pointer text-lg font-bold">
+            <summary className=" marker:text-quaternary cursor-pointer text-xl font-bold">
               Preciso fornecer o acesso do meu WhatsApp para automatizar?
             </summary>
             Você receberá todas as orientações para que o programa rode em seu

@@ -31,7 +31,7 @@ export default function CardsStep({
   const animation2Class = animation1Complete && inView ? "scale-up-tr" : "";
 
   return (
-    <div className=" flex justify-center items-center">
+    <div className=" flex justify-center items-center flex-wrap">
       <div
         className={`${
           inView ? "scale-up-tr" : null

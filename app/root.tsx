@@ -28,7 +28,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className=" max-w-[100vw] overflow-x-hidden">
         <Navbar />
         <Outlet />
         <ScrollRestoration />
